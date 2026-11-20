@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>La historieta del mes / sirviendo código;</title>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Poppins:wght@400;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#EAF4F8;color:#2F455C;font-family:Poppins,'Segoe UI',Arial,sans-serif;display:flex;align-items:center;justify-content:center;padding:24px 14px}
+.card{width:100%;max-width:640px;background:#E6F7FD radial-gradient(rgba(68,193,240,.55) 1.2px,transparent 1.4px) 0 0/12px 12px;border:2.5px solid #2F455C;border-radius:20px;box-shadow:6px 6px 0 #2F455C;padding:clamp(22px,4vw,36px);text-align:center}
+.logo{font-family:Comfortaa,Arial,sans-serif;font-weight:700;font-size:18px;margin-bottom:18px}
+.tag{display:inline-block;background:#2F455C;color:#fff;font-family:Comfortaa,Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;padding:6px 12px;border-radius:6px}
+h1{font-family:Comfortaa,Arial,sans-serif;font-weight:700;font-size:clamp(26px,5vw,36px);line-height:1.15;margin:14px 0 6px;-webkit-text-stroke:.6px currentColor}
+.sub{font-size:16px;margin:0 0 20px}
+.cod{width:130px;height:auto;display:block;margin:4px auto 12px}
+.pasos{background:#fff;border:2.5px solid #2F455C;border-radius:14px;padding:18px 20px;text-align:left;margin:0 0 18px}
+.pasos ol{margin:0;padding-left:22px}
+.pasos li{margin:0 0 12px;line-height:1.55;font-size:15px}
+.pasos li:last-child{margin-bottom:0}
+.mano{font-family:'Patrick Hand',cursive;font-size:22px;color:#2B8FB8;margin:0 0 20px}
+.btn{display:inline-block;background:#2F455C;color:#fff;text-decoration:none;font-family:Comfortaa,Arial,sans-serif;font-weight:700;font-size:15px;border:3px solid #2F455C;border-radius:999px;padding:12px 24px}
+.btn:hover{background:#44C1F0;color:#2F455C}
+[hidden]{display:none!important}
+</style></head>
+<body>
+<main class="card">
+  <div class="logo">sirviendo código;</div>
+  <span class="tag">LA HISTORIETA DEL MES</span>
+
+  <!-- «No lo pillo» -->
+  <section id="nolopillo">
+    <h1>Los chistes no se explican.</h1>
+    <p class="sub">Pero somos comunidad, así que haremos una excepción. Solo por esta vez.</p>
+    <img class="cod" src="../img/codiguito-cobra-vida-claro-t.gif" alt="Codiguito, armándose de paciencia">
+    <div class="pasos"><ol>
+      <li>Cuando algo falla en el servidor, quien lo programó suele soltar la frase más famosa del gremio: <b>«en mi máquina funciona»</b>.</li>
+      <li>La respuesta de toda la vida es: <b>«pues mandamos tu máquina a producción»</b>. O sea, en vez de arreglar el fallo, nos llevamos su ordenador al servidor.</li>
+      <li>Codiguito es muy literal y lo ha hecho de verdad. Y a quien lo usaba solo le duele una cosa: su <b>teclado RGB</b>, ese de lucecitas de colores al que quiere más que a nada en el mundo.</li>
+    </ol></div>
+    <p class="mano">¿Ves? Explicado tiene muchísima menos gracia. Por eso no se explican.</p>
+  </section>
+
+  <!-- «Me ha hecho gracia» -->
+  <section id="gracia" hidden>
+    <h1>¡Eso es tener buen gusto!</h1>
+    <p class="sub">Codiguito se lo apunta y ya está pensando en la del mes que viene.</p>
+    <img class="cod" src="../img/codiguito-saludo-claro.gif" alt="Codiguito saludando, muy orgulloso">
+  </section>
+
+  <a class="btn" href="./#historieta">Volver a la newsletter</a>
+</main>
+<script>
+// Guarda la reacción en la pestaña «Historieta» de la hoja (una por persona y mes en este navegador)
+const API_URL = "https://script.google.com/macros/s/AKfycbzMOEyIgnWCsfQTLf-irEmlIoDBWO5F4Uu1PUcv5_mKJJryc-jCHbUQDsDV4AqOuDUM/exec";
+const q = new URLSearchParams(location.search);
+const r = (q.get("r") || "nolopillo").toLowerCase() === "gracia" ? "gracia" : "nolopillo";
+const mes = q.get("mes") || "2026-11";
+document.getElementById("gracia").hidden = r !== "gracia";
+document.getElementById("nolopillo").hidden = r === "gracia";
+try {
+  const clave = "sc-chiste-" + mes;
+  if (localStorage.getItem(clave) !== r && API_URL) {
+    fetch(API_URL + "?accion=reaccion&reaccion=" + r + "&mes=" + encodeURIComponent(mes)).catch(() => {});
+    localStorage.setItem(clave, r);
+  }
+} catch (e) {}
+</script>
+</body></html>

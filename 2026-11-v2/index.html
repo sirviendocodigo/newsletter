@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light only"><meta name="referrer" content="strict-origin-when-cross-origin">
+<title>El diario de Codiguito / noviembre</title>
+<!--[if !mso]><!--><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Poppins:wght@400;600;700&family=Barlow+Condensed:wght@900&family=Gochi+Hand&family=Nunito:wght@400;800&display=swap" rel="stylesheet"><!--<![endif]-->
+<!--[if mso]><style>body,table,td,a,span,div,p,h1,h2{font-family:Arial,sans-serif !important;}</style><![endif]-->
+<style>
+*{box-sizing:border-box;}
+h1,h2,.tit,.logo{-webkit-text-stroke:.6px currentColor;}
+html{scroll-behavior:smooth;} body{margin:0;background:#EAF4F8;color:#2F455C;} a{color:#2F455C;}
+img{max-width:100%;}
+[id]{scroll-margin-top:16px;}
+.pagina{max-width:1240px;margin:0 auto;padding:24px clamp(10px,3vw,24px) 40px;position:relative;z-index:1;}
+.blk{background:#ffffff;border:2.5px solid #2F455C;border-radius:20px;box-shadow:6px 6px 0 #2F455C;padding:clamp(18px,2.4vw,30px);min-width:0;}
+.cabecera{background:#44C1F0;background-image:linear-gradient(45deg,#44C1F0 30%,#70C1AD);border:2.5px solid #2F455C;border-radius:20px;box-shadow:6px 6px 0 #2F455C;padding:18px clamp(18px,2.6vw,32px);margin-bottom:24px;}
+.blk{margin-bottom:28px;}
+.cols{display:flex;gap:24px;align-items:stretch;}
+.col{display:flex;flex-direction:column;min-width:0;}
+.col-i{flex:7 1 0;} .col-d{flex:5 1 0;}
+.col > .blk:last-child{flex:1 1 auto;}
+.cierre > .blk{margin-bottom:28px;}
+.firma-wrap{height:100%;}
+.s-madremia,.s-firma{background:none;border:0;box-shadow:none;padding:0;}
+.t-azul{background:#E6F7FD radial-gradient(rgba(68,193,240,.55) 1.2px,transparent 1.4px) 0 0/12px 12px;}
+.t-verde{background:#E3F4EF radial-gradient(rgba(112,193,173,.6) 1.2px,transparent 1.4px) 0 0/12px 12px;}
+.t-gris{background:#ECF1F5 radial-gradient(rgba(122,145,168,.45) 1.2px,transparent 1.4px) 0 0/12px 12px;}
+.cierre{display:flex;gap:24px;align-items:center;}
+.s-historieta img.tira{width:100%!important;max-width:100%!important;}
+.s-historieta{display:flex;flex-direction:column;justify-content:center;}
+.cierre .s-voto{flex:1 1 auto;}
+.s-madremia > table, .s-madremia .madremia, .s-firma > table, .s-firma .firma{height:100%;}
+/* Portada */
+.ht{background-image:radial-gradient(#44C1F0 1.2px,transparent 1.3px)!important;background-size:10px 10px!important;}
+.portada{padding:clamp(16px,2.2vw,28px)!important;}
+.portada h1{font-size:clamp(24px,2.8vw,38px)!important;}
+.portada .entradilla{font-size:15px!important;}
+.bocadillo-portada{padding:clamp(16px,2vw,26px)!important;}
+.indice a:hover{color:#2B8FB8!important;}
+h2{font-size:clamp(20px,1.8vw,25px)!important;}
+/* Vídeos incrustados */
+.yt{position:relative;width:100%;padding-top:56.25%;background:#2F455C;}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+/* Polaroids */
+.pola-in{transition:transform .2s;} .pola:nth-child(1) .pola-in{transform:rotate(-3deg);} .pola:nth-child(2) .pola-in{transform:rotate(2deg);} .pola:nth-child(3) .pola-in{transform:rotate(-1.5deg);}
+.pola-in:hover{transform:rotate(0) scale(1.03)!important;}
+.pola-play{position:absolute;left:50%;top:50%;width:36px;height:36px;margin:-18px 0 0 -18px;border-radius:50%;background:rgba(47,69,92,.85);border:2px solid #fff;}
+.pola-play::after{content:"";position:absolute;left:13px;top:9px;border-left:12px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent;}
+.postit{transform:rotate(-1deg);}
+/* Logos de comunidades: redondos y pinchables */
+.logos{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px;}
+.logos a{display:block;border-radius:50%;transition:transform .2s;}
+.logos a:hover{transform:scale(1.08) rotate(-4deg);}
+.logos img{display:block;width:76px;height:76px;}
+.pie{background:#2F455C;text-align:center;padding:32px 24px;border-radius:20px;margin-top:4px;}
+#nodos{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+/* Sopa de letras: más compacta, con la lista y el podio al lado */
+.sopa-wrap{max-width:420px;margin:0 auto;font-family:Poppins,Arial,sans-serif;}
+.sopa-top{display:flex;justify-content:space-between;color:#2F455C;font-weight:700;margin-bottom:8px;}
+.sopa{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;user-select:none;touch-action:none;}
+.sopa div{aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:#F3FAFD;border-radius:7px;font-family:Comfortaa,Arial;font-weight:700;color:#2F455C;cursor:pointer;font-size:15px;transition:.15s;}
+.sopa div.sel{background:#44C1F0;color:#fff;transform:scale(1.06);}
+.sopa div.ok{background:#70C1AD;color:#fff;}
+.lista{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0;}
+.lista span{padding:5px 11px;border-radius:999px;background:#EAF4F8;color:#2F455C;font-size:13px;font-weight:600;}
+.lista span.ok{background:#70C1AD;color:#fff;text-decoration:line-through;}
+.fin{text-align:center;padding:16px;background:#F3FAFD;border-radius:14px;margin-bottom:12px;}
+.fin input{padding:10px 14px;border:2px solid #E3EEF3;border-radius:999px;font-family:Poppins;margin:10px 6px 0 0;}
+.fin button{padding:11px 18px;border:0;border-radius:999px;background:#2F455C;color:#fff;font-family:Poppins;font-weight:600;cursor:pointer;}
+.rank{background:#F3FAFD;border-radius:14px;padding:14px 18px;color:#2F455C;font-size:14px;}
+.rank ol{margin:10px 0 0;padding:0;list-style:none;}
+.rank li{display:flex;align-items:center;gap:10px;padding:6px 8px;}
+.rank li i{font-style:normal;width:24px;height:24px;border-radius:50%;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:Comfortaa,Arial;font-weight:700;font-size:12px;flex:none;}
+.rank li span{margin-left:auto;}
+.rank li.vacio{padding-left:0;}
+.rank li span{color:#7a8a99;font-variant-numeric:tabular-nums;}
+.rank-top{display:flex;align-items:center;flex-wrap:wrap;gap:4px;}
+.directo[hidden]{display:none!important;}
+.directo{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#227966;}
+.directo i{width:8px;height:8px;border-radius:50%;background:#70C1AD;animation:latido 1.6s infinite;}
+@keyframes latido{0%{box-shadow:0 0 0 0 rgba(112,193,173,.7)}70%{box-shadow:0 0 0 8px rgba(112,193,173,0)}100%{box-shadow:0 0 0 0 rgba(112,193,173,0)}}
+.rank li.nuevo{animation:entra 1.2s ease;border-radius:8px;}
+@keyframes entra{0%{opacity:0;transform:translateX(-12px);background:#DFF4FC}40%{opacity:1;transform:none;background:#DFF4FC}100%{background:transparent}}
+.record{display:none;margin-top:10px;padding:10px 14px;border-radius:12px;background:linear-gradient(45deg,#44C1F0 30%,#70C1AD);color:#fff;font-size:14px;}
+.record.ver{display:block;animation:pop .6s ease;}
+@keyframes pop{0%{transform:scale(.8);opacity:0}60%{transform:scale(1.04);opacity:1}100%{transform:none}}
+@media (prefers-reduced-motion:reduce){.rank li.nuevo,.record.ver,.directo i{animation:none}}
+@media (prefers-reduced-motion:reduce){#nodos{display:none;}}
+.juego-panel{margin-top:18px;border:2.5px solid #2F455C;border-right-width:5px;border-bottom-width:5px;border-radius:10px;padding:16px;background:#ffffff;}
+.juego-panel .sopa-wrap{max-width:none;display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);grid-template-areas:"top top" "sopa lista" "sopa fin" "sopa rank";column-gap:20px;align-items:start;}
+.juego-panel .sopa-top{grid-area:top;max-width:300px;} .juego-panel .sopa{grid-area:sopa;gap:2px;} .juego-panel .lista{grid-area:lista;margin-top:0;} .juego-panel .fin{grid-area:fin;} .juego-panel .rank{grid-area:rank;}
+.sopa div{border:1.2px solid #2F455C;background:#ffffff;font-size:12px;border-radius:5px;}
+.lista span{font-size:11px;padding:4px 9px;}
+/* Móvil */
+@media (max-width:700px){
+ .juego-panel .sopa-wrap{display:block;} .juego-panel .sopa-top{max-width:none;}
+ .col2{display:block!important;width:100%!important;}
+ .mm-logos,.mm-logos table{width:96px!important;} .mm-iso{width:52px!important;} .mm-flor{width:58px!important;}
+ .portada-gif{display:block!important;width:100%!important;padding:14px 0 0!important;}
+ .portada-txt{display:block!important;width:100%!important;}
+ .pola{display:inline-block!important;width:48%!important;}
+ .cabecera .logo{font-size:18px!important;} .cabecera .pill{font-size:11px!important;padding:4px 9px!important;}
+}
+</style></head>
+<body>
+<div class="pagina">
+<header class="cabecera"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td class="logo" style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:22px;color:#ffffff;white-space:nowrap;">sirviendo código;</td>
+<td align="right"><span class="pill" style="display:inline-block;font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:12px;color:#ffffff;border:2px solid #ffffff;border-radius:999px;padding:5px 12px;white-space:nowrap;">Nº 01 / noviembre 2026</span></td>
+</tr></table></header>
+<main class="rejilla">
+
+<!-- ===== PORTADA ===== -->
+<section class="blk s-portada t-azul"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;"><tr>
+<td class="portada" style="padding:0;">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#2F455C" style="background:#2F455C;padding:6px 10px;font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;color:#ffffff;">EL DIARIO DE CODIGUITO</td></tr></table>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:14px;"><tr>
+<td class="portada-txt" width="58%" valign="middle">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;"><tr><td class="bocadillo-portada" bgcolor="#ffffff" style="background:#ffffff;border:3px solid #2F455C;border-radius:26px;padding:18px 20px;">
+<img class="gif-querido" src="../img/codiguito-querido-diario.gif" width="300" height="85" alt="Codiguito escribe: Querido diario:" style="display:block;width:300px;max-width:100%;height:auto;border:0;margin:-6px 0 2px -8px;">
+<h1 style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:25px;line-height:1.2;color:#2F455C;margin:6px 0 10px;">Noviembre ha hecho merge y viene cargadito.</h1>
+<div class="entradilla" style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.55;color:#2F455C;">Te lo apunto todo aquí antes de que se me olvide. Charlas, noticias, planes, un caso por resolver y una historieta. Si llegas al final, hay premio.</div>
+</td></tr></table></td>
+<td class="portada-gif" width="42%" valign="middle" style="padding-left:14px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="indice"><tr><td bgcolor="#44C1F0" style="background:#44C1F0;background-image:linear-gradient(45deg,#44C1F0 30%,#70C1AD);border:2px solid #2F455C;border-radius:10px;padding:8px 12px;font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:14px;color:#ffffff;" class="tit"><img src="../img/ic-log-blanco.png" width="18" height="18" alt="" style="display:inline-block;vertical-align:middle;border:0;margin-right:8px;">git log --noviembre</td></tr><tr><td style="padding:4px 4px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-bottom:1px solid rgba(47,69,92,.18);padding:8px 2px;"><a href="#charlas" style="text-decoration:none;color:#2F455C;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;display:block;"><img src="../img/ic-charlas-oscuro.png" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border:0;margin:0 10px 0 8px;"><span style="color:#2B8FB8;font-weight:700;">Capítulo 1:</span> Las charlas del mes <span style="color:#2B8FB8;">&#8250;</span></a></td></tr><tr><td style="border-bottom:1px solid rgba(47,69,92,.18);padding:8px 2px;"><a href="#noticias" style="text-decoration:none;color:#2F455C;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;display:block;"><img src="../img/ic-noticias-oscuro.png" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border:0;margin:0 10px 0 8px;"><span style="color:#2B8FB8;font-weight:700;">Capítulo 2:</span> Noticias en 1 minuto <span style="color:#2B8FB8;">&#8250;</span></a></td></tr><tr><td style="border-bottom:1px solid rgba(47,69,92,.18);padding:8px 2px;"><a href="#eventos" style="text-decoration:none;color:#2F455C;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;display:block;"><img src="../img/ic-eventos-oscuro.png" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border:0;margin:0 10px 0 8px;"><span style="color:#2B8FB8;font-weight:700;">Capítulo 3:</span> Planes en eventos.wiki <span style="color:#2B8FB8;">&#8250;</span></a></td></tr><tr><td style="border-bottom:1px solid rgba(47,69,92,.18);padding:8px 2px;"><a href="#reto" style="text-decoration:none;color:#2F455C;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;display:block;"><img src="../img/ic-reto-oscuro.png" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border:0;margin:0 10px 0 8px;"><span style="color:#2B8FB8;font-weight:700;">Capítulo 4:</span> El caso de las 8 palabras <span style="color:#2B8FB8;">&#8250;</span></a></td></tr><tr><td style="border-bottom:1px solid rgba(47,69,92,.18);padding:8px 2px;"><a href="#comunidades" style="text-decoration:none;color:#2F455C;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;display:block;"><img src="../img/ic-comunidades-oscuro.png" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border:0;margin:0 10px 0 8px;"><span style="color:#2B8FB8;font-weight:700;">Capítulo 5:</span> Ping pong de comunidades <span style="color:#2B8FB8;">&#8250;</span></a></td></tr><tr><td style="border-bottom:1px solid rgba(47,69,92,.18);padding:8px 2px;"><a href="#historieta" style="text-decoration:none;color:#2F455C;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;display:block;"><img src="../img/ic-historieta-oscuro.png" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border:0;margin:0 10px 0 8px;"><span style="color:#2B8FB8;font-weight:700;">Capítulo 6:</span> La historieta del mes <span style="color:#2B8FB8;">&#8250;</span></a></td></tr><tr><td style="border-bottom:1px solid rgba(47,69,92,.18);padding:8px 2px;"><a href="#madremia" style="text-decoration:none;color:#2F455C;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;display:block;"><img src="../img/ic-madremia-oscuro.png" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border:0;margin:0 10px 0 8px;"><span style="color:#2B8FB8;font-weight:700;">Capítulo 7:</span> Novedad: madre mIA <span style="color:#2B8FB8;">&#8250;</span></a></td></tr></table></td></tr></table>
+</td></tr></table>
+</td></tr></table></section>
+
+<!-- ===== CHARLAS ===== -->
+<section class="blk s-charlas t-verde"><a name="charlas" id="charlas"></a><table role="presentation" class="capitulo" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px;"><tr><td bgcolor="#2F455C" style="background:#2F455C;border-radius:6px;padding:7px 12px 7px 10px;font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;color:#ffffff;white-space:nowrap;" class="tit"><img src="../img/ic-charlas-blanco.png" width="20" height="20" alt="" style="display:inline-block;width:20px;height:20px;max-width:none;vertical-align:middle;border:0;margin-right:8px;"><span style="vertical-align:middle;">CAPÍTULO 1</span></td><td width="100%" style="padding-left:12px;"><h2 style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:23px;line-height:1.2;color:#2F455C;margin:0;">Las charlas del mes</h2></td></tr></table>
+<div class="charlas-cuerpo">
+<div class="charlas-video">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:2.5px solid #2F455C;border-right-width:5px;border-bottom-width:5px;border-radius:10px;border-collapse:separate;overflow:hidden;">
+<tr><td bgcolor="#FFF8D6" style="background:#FFF8D6;border-bottom:3px solid #2F455C;padding:9px 14px;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;font-style:italic;font-weight:600;color:#2F455C;">España sin luz. Mercadona, funcionando.</td></tr>
+<tr><td bgcolor="#2F455C" style="background:#2F455C;padding:0;font-size:0;line-height:0;"><div id="video-charlas" class="yt"><iframe src="https://www.youtube-nocookie.com/embed/OgQlnOfSSuM?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Te contamos las charlas de noviembre" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></td></tr>
+</table></div>
+<div class="charlas-polas">
+<p style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.6;color:#2F455C;margin:0 0 12px;font-weight:600;margin:20px 0 0;">Y estas son las polaroids que pegué en el diario:</p>
+<!-- POLAROIDS: 3 en línea. Para una cuarta, añade otra celda polaroid() y cambia width a 25% -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="polas"><tr>
+<td class="pola" width="33%" valign="top" style="padding:14px 6px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="pola-in" style="border-collapse:separate;"><tr><td align="center" style="font-size:0;line-height:0;padding:0;"><div style="display:inline-block;width:56px;height:14px;background:#70C1AD;opacity:.75;margin-bottom:-7px;position:relative;"></div></td></tr><tr><td bgcolor="#ffffff" style="background:#ffffff;border:1px solid #D5E2EA;border-bottom:3px solid #C9D7E0;padding:8px 8px 10px;"><a href="https://youtu.be/OgQlnOfSSuM" target="_blank" class="pola-foto" style="text-decoration:none;display:block;position:relative;"><img src="https://i.ytimg.com/vi/OgQlnOfSSuM/mqdefault.jpg" width="160" alt="Ver la charla: Cuando España se apagó: Mercadona Tech sin luz ni internet" style="display:block;width:100%;height:auto;border:0;background:#2F455C;"><span class="pola-play" aria-hidden="true"></span></a><div style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:13px;line-height:1.3;color:#2F455C;margin:9px 0 2px;">Cuando España se apagó: Mercadona Tech sin luz ni internet</div><div style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;color:#3E7F70;font-weight:600;">Emilio Carrión</div><a href="https://youtu.be/OgQlnOfSSuM" target="_blank" style="display:block;text-align:center;text-decoration:none;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;border-radius:999px;padding:6px 6px;margin-top:6px;background:#2F455C;color:#ffffff;border:2px solid #2F455C;">&#9654; Ver la charla</a><a href="https://sirviendocodigo.com/blog/arquitectura-offline-first-apagon-mercadona-tech" target="_blank" style="display:block;text-align:center;text-decoration:none;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;border-radius:999px;padding:6px 6px;margin-top:6px;background:#ffffff;color:#2F455C;border:2px solid #2F455C;">Leer el artículo</a></td></tr></table></td>
+<td class="pola" width="33%" valign="top" style="padding:14px 6px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="pola-in" style="border-collapse:separate;"><tr><td align="center" style="font-size:0;line-height:0;padding:0;"><div style="display:inline-block;width:56px;height:14px;background:#44C1F0;opacity:.75;margin-bottom:-7px;position:relative;"></div></td></tr><tr><td bgcolor="#ffffff" style="background:#ffffff;border:1px solid #D5E2EA;border-bottom:3px solid #C9D7E0;padding:8px 8px 10px;"><a href="https://youtu.be/6bZdfyJ4EV0" target="_blank" class="pola-foto" style="text-decoration:none;display:block;position:relative;"><img src="https://i.ytimg.com/vi/6bZdfyJ4EV0/mqdefault.jpg" width="160" alt="Ver la charla: Power BI con IA desde el terminal" style="display:block;width:100%;height:auto;border:0;background:#2F455C;"><span class="pola-play" aria-hidden="true"></span></a><div style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:13px;line-height:1.3;color:#2F455C;margin:9px 0 2px;">Power BI con IA desde el terminal</div><div style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;color:#3E7F70;font-weight:600;">Alex Ayala</div><a href="https://youtu.be/6bZdfyJ4EV0" target="_blank" style="display:block;text-align:center;text-decoration:none;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;border-radius:999px;padding:6px 6px;margin-top:6px;background:#2F455C;color:#ffffff;border:2px solid #2F455C;">&#9654; Ver la charla</a><a href="https://sirviendocodigo.com/blog/power-bi-ia-terminal-alex-ayala" target="_blank" style="display:block;text-align:center;text-decoration:none;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;border-radius:999px;padding:6px 6px;margin-top:6px;background:#ffffff;color:#2F455C;border:2px solid #2F455C;">Leer el artículo</a></td></tr></table></td>
+<td class="pola" width="33%" valign="top" style="padding:14px 6px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="pola-in" style="border-collapse:separate;"><tr><td align="center" style="font-size:0;line-height:0;padding:0;"><div style="display:inline-block;width:56px;height:14px;background:#70C1AD;opacity:.75;margin-bottom:-7px;position:relative;"></div></td></tr><tr><td bgcolor="#ffffff" style="background:#ffffff;border:1px solid #D5E2EA;border-bottom:3px solid #C9D7E0;padding:8px 8px 10px;"><a href="https://youtu.be/u8fxszmjqBI" target="_blank" class="pola-foto" style="text-decoration:none;display:block;position:relative;"><img src="https://i.ytimg.com/vi/u8fxszmjqBI/mqdefault.jpg" width="160" alt="Ver la charla: ¿Ha cambiado la programación con la IA?" style="display:block;width:100%;height:auto;border:0;background:#2F455C;"><span class="pola-play" aria-hidden="true"></span></a><div style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:13px;line-height:1.3;color:#2F455C;margin:9px 0 2px;">¿Ha cambiado la programación con la IA?</div><div style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;color:#3E7F70;font-weight:600;">Manz</div><a href="https://youtu.be/u8fxszmjqBI" target="_blank" style="display:block;text-align:center;text-decoration:none;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;border-radius:999px;padding:6px 6px;margin-top:6px;background:#2F455C;color:#ffffff;border:2px solid #2F455C;">&#9654; Ver la charla</a><a href="https://sirviendocodigo.com/blog/cambios-en-programacion-con-ia-por-manz" target="_blank" style="display:block;text-align:center;text-decoration:none;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;font-weight:700;border-radius:999px;padding:6px 6px;margin-top:6px;background:#ffffff;color:#2F455C;border:2px solid #2F455C;">Leer el artículo</a></td></tr></table></td>
+</tr></table>
+<div style="text-align:center;margin-top:20px;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" style="display:inline-table;margin:6px 6px 0 0;border-collapse:separate;"><tr><td align="center" bgcolor="#2F455C" style="background:#2F455C;border:3px solid #2F455C;border-radius:999px;padding:11px 22px;font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:14px;line-height:18px;"><a href="https://www.youtube.com/@SirviendoC%C3%B3digo?sub_confirmation=1" target="_blank" style="color:#ffffff;text-decoration:none;display:inline-block;">Todas las charlas, completas, en el canal</a></td></tr></table></div>
+</div></div></section>
+
+<!-- ===== NOTICIAS ===== -->
+<section class="blk s-noticias t-gris"><!-- AQUÍ IRÁ EL GIF de Codiguito reportero (64 px) junto al título, cuando exista -->
+<a name="noticias" id="noticias"></a><table role="presentation" class="capitulo" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px;"><tr><td bgcolor="#2F455C" style="background:#2F455C;border-radius:6px;padding:7px 12px 7px 10px;font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;color:#ffffff;white-space:nowrap;" class="tit"><img src="../img/ic-noticias-blanco.png" width="20" height="20" alt="" style="display:inline-block;width:20px;height:20px;max-width:none;vertical-align:middle;border:0;margin-right:8px;"><span style="vertical-align:middle;">CAPÍTULO 2</span></td><td width="100%" style="padding-left:12px;"><h2 style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:23px;line-height:1.2;color:#2F455C;margin:0;">Noticias en 1 minuto</h2></td></tr></table>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:2.5px solid #2F455C;border-right-width:5px;border-bottom-width:5px;border-radius:10px;border-collapse:separate;overflow:hidden;">
+<tr><td bgcolor="#FFF8D6" style="background:#FFF8D6;border-bottom:3px solid #2F455C;padding:9px 14px;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;font-style:italic;font-weight:600;color:#2F455C;">Noviembre en tech, en un minuto.</td></tr>
+<tr><td bgcolor="#2F455C" style="background:#2F455C;padding:0;font-size:0;line-height:0;"><div id="video-noticias" class="yt"><iframe src="https://www.youtube-nocookie.com/embed/049q-ogFJu8?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Noviembre en tech, en un minuto" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></td></tr>
+</table>
+<div style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.55;color:#2F455C;text-align:center;margin:16px 0 4px;">En el vídeo va lo justo. Todo desarrollado, con fuentes y contexto, en el artículo.</div>
+<!-- EDITAR: enlace al artículo largo de noticias del mes -->
+<div style="text-align:center;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" style="display:inline-table;margin:6px 6px 0 0;border-collapse:separate;"><tr><td align="center" bgcolor="#2F455C" style="background:#2F455C;border:3px solid #2F455C;border-radius:999px;padding:11px 22px;font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:14px;line-height:18px;"><a href="https://sirviendocodigo.com/blog" target="_blank" style="color:#ffffff;text-decoration:none;display:inline-block;">Quiero la versión larga</a></td></tr></table></div></section>
+
+<!-- ===== EVENTOS ===== -->
+<section class="blk s-eventos t-azul"><a name="eventos" id="eventos"></a><table role="presentation" class="capitulo" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px;"><tr><td bgcolor="#2F455C" style="background:#2F455C;border-radius:6px;padding:7px 12px 7px 10px;font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;color:#ffffff;white-space:nowrap;" class="tit"><img src="../img/ic-eventos-blanco.png" width="20" height="20" alt="" style="display:inline-block;width:20px;height:20px;max-width:none;vertical-align:middle;border:0;margin-right:8px;"><span style="vertical-align:middle;">CAPÍTULO 3</span></td><td width="100%" style="padding-left:12px;"><h2 style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:23px;line-height:1.2;color:#2F455C;margin:0;">Planes que ya tengo apuntados</h2></td></tr></table>
+<!-- GIF del mes: se genera con generador-v2/eventos/generar_gif_eventos.py (edita la lista de eventos y el call for papers) -->
+<a href="https://eventos.wiki/events/" target="_blank" style="display:block;text-decoration:none;font-size:0;line-height:0;">
+<img src="../img/eventos-2026-11.gif" width="560" alt="Codiguito pega en el tablón los próximos eventos: NetCoreConf Barcelona el 13 de diciembre, un meetup de agentes de IA el 15 de diciembre, GenAI Summit EU el 13 de abril, y avisa de los call for papers abiertos" style="display:block;width:100%;height:auto;border:0;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color:#2F455C;"></a>
+<div style="height:12px;line-height:12px;font-size:0;">&nbsp;</div>
+<!-- EDITAR: enlace a la sección de call for papers si existe una página propia -->
+<div style="text-align:center;"><table role="presentation" cellpadding="0" cellspacing="0" border="0" style="display:inline-table;margin:6px 6px 0 0;border-collapse:separate;"><tr><td align="center" bgcolor="#2F455C" style="background:#2F455C;border:3px solid #2F455C;border-radius:999px;padding:11px 22px;font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:14px;line-height:18px;"><a href="https://eventos.wiki/events/" target="_blank" style="color:#ffffff;text-decoration:none;display:inline-block;">Ver toda la agenda</a></td></tr></table><table role="presentation" cellpadding="0" cellspacing="0" border="0" style="display:inline-table;margin:6px 6px 0 0;border-collapse:separate;"><tr><td align="center" bgcolor="#ffffff" style="background:#ffffff;border:3px solid #2F455C;border-radius:999px;padding:11px 22px;font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:14px;line-height:18px;"><a href="https://eventos.wiki/" target="_blank" style="color:#2F455C;text-decoration:none;display:inline-block;">Call for papers abiertos</a></td></tr></table></div>
+<div style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;text-align:center;margin-top:10px;color:#2F455C;">¿Organizas un evento? <a href="https://eventos.wiki/" target="_blank" style="color:#2F455C;font-weight:700;">Súbelo a eventos.wiki</a></div></section>
+
+<!-- ===== RETO ===== -->
+<section class="blk s-reto t-verde"><a name="reto" id="reto"></a><table role="presentation" class="capitulo" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px;"><tr><td bgcolor="#2F455C" style="background:#2F455C;border-radius:6px;padding:7px 12px 7px 10px;font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;color:#ffffff;white-space:nowrap;" class="tit"><img src="../img/ic-reto-blanco.png" width="20" height="20" alt="" style="display:inline-block;width:20px;height:20px;max-width:none;vertical-align:middle;border:0;margin-right:8px;"><span style="vertical-align:middle;">CAPÍTULO 4</span></td><td width="100%" style="padding-left:12px;"><h2 style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:23px;line-height:1.2;color:#2F455C;margin:0;">El caso de las 8 palabras</h2></td></tr></table>
+<div class="reto-cuerpo">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;"><tr>
+<td bgcolor="#2F455C" style="background:#2F455C;border:3px solid #2F455C;border-right:7px solid #44C1F0;border-bottom:7px solid #44C1F0;border-radius:10px;padding:18px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td class="col2" width="150" valign="middle" align="center"><img src="../img/codiguito-cobra-vida.gif" width="140" height="140" alt="Codiguito se pone en marcha" style="display:block;border:0;margin:0 auto;"></td>
+<td class="col2" valign="middle" style="padding-left:12px;">
+<div class="tit" style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:19px;line-height:1.3;color:#ffffff;">He escondido 8 palabras de la comunidad aquí dentro.</div>
+<div style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.55;color:#E3EEF3;margin:8px 0 0;">Arrastra de la primera a la última letra. El cronómetro arranca con tu primer toque y los tres mejores tiempos suben al podio en directo.</div>
+</td></tr></table></td></tr></table>
+<div class="juego-panel">
+<div id="sin-js"><div style="padding:14px 16px;border-radius:14px;background:#FFF6E5;color:#2F455C;font-size:14px;">Esta vista previa no deja jugar. Abre la página en Chrome o Safari para jugar y entrar en el podio.</div></div>
+<div id="reto-juego" class="sopa-wrap">
+<div class="sopa-top"><span id="crono">0:00</span><span id="cont">0 / 8</span></div>
+<div id="sopa" class="sopa"></div>
+<div id="lista" class="lista"></div>
+<div id="fin" class="fin" hidden>
+<div style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:20px;color:#2F455C;">¡Hecho en <span id="tfinal"></span>!</div>
+<input id="nombre" maxlength="24" placeholder="Tu nombre o @usuario"><button id="guardar">Entrar en el ranking</button>
+</div>
+<div class="rank"><div class="rank-top"><img src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2248%22 height=%2248%22 viewBox=%220 0 48 48%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%221%22 x2=%221%22 y2=%220%22%3E%3Cstop offset=%22.3%22 stop-color=%22%2344C1F0%22/%3E%3Cstop offset=%221%22 stop-color=%22%2370C1AD%22/%3E%3C/linearGradient%3E%3C/defs%3E %3Crect width=%2248%22 height=%2248%22 rx=%2213%22 fill=%22url%28%23g%29%22/%3E%3Cg transform=%22translate%2810 10%29 scale%281.1667%29%22 fill=%22none%22 stroke=%22%23fff%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M8 4h8v5a4 4 0 0 1-8 0V4zM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8.5 20.5h7M10 17h4v3.5h-4z%22/%3E%3C/g%3E%3C/svg%3E" width="24" height="24" alt="" style="display:inline-block;vertical-align:middle;border:0;margin-right:8px;"><b style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;">Podio de noviembre</b><span id="directo" class="directo" hidden><i></i>en directo</span></div><div id="record" class="record"></div><ol id="rank"></ol></div>
+</div>
+
+</div></div></section>
+
+<!-- ===== COMUNIDADES ===== -->
+<section class="blk s-comunidades t-gris"><a name="comunidades" id="comunidades"></a><table role="presentation" class="capitulo" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px;"><tr><td bgcolor="#2F455C" style="background:#2F455C;border-radius:6px;padding:7px 12px 7px 10px;font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;color:#ffffff;white-space:nowrap;" class="tit"><img src="../img/ic-comunidades-blanco.png" width="20" height="20" alt="" style="display:inline-block;width:20px;height:20px;max-width:none;vertical-align:middle;border:0;margin-right:8px;"><span style="vertical-align:middle;">CAPÍTULO 5</span></td><td width="100%" style="padding-left:12px;"><h2 style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:23px;line-height:1.2;color:#2F455C;margin:0;">Ping pong con Software Crafters</h2></td></tr></table>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:2.5px solid #2F455C;border-right-width:5px;border-bottom-width:5px;border-radius:10px;border-collapse:separate;overflow:hidden;">
+<!-- EDITAR: aquí irá el gancho del ping pong cuando lo tengamos, con narrador("...") -->
+<tr><td bgcolor="#2F455C" style="background:#2F455C;padding:0;font-size:0;line-height:0;"><div id="video-comunidades" class="yt"><iframe src="https://www.youtube-nocookie.com/embed/OV6S2IB573Q?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Ping pong con la comunidad del mes" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></td></tr>
+</table>
+<div style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;font-weight:600;color:#2F455C;margin:20px 0 6px;">Las comunidades con las que compartimos red:</div>
+<!-- LOGOS: añade o quita entradas en LOGOS (archivo img/logo-<nombre>.png, 240x120) -->
+<ul class="logos"><li><a href="https://aws.amazon.com/developer/community/community-builders/" target="_blank" title="AWS Community Builders"><img src="../img/logo-aws-community-builders-r.png" width="84" height="84" alt="AWS Community Builders"></a></li><li><a href="https://gdg.community.dev/gdg-madrid" target="_blank" title="GDG Madrid"><img src="../img/logo-gdg-madrid-r.png" width="84" height="84" alt="GDG Madrid"></a></li><li><a href="https://www.meetup.com/madridjug/" target="_blank" title="MadridJUG"><img src="../img/logo-madridjug-r.png" width="84" height="84" alt="MadridJUG"></a></li><li><a href="https://ruralhackers.com/" target="_blank" title="Rural Hackers"><img src="../img/logo-rural-hackers-r.png" width="84" height="84" alt="Rural Hackers"></a></li><li><a href="#" target="_blank" title="ProxyHands"><img src="../img/logo-proxyhands-r.png" width="84" height="84" alt="ProxyHands"></a></li><li><a href="#" target="_blank" title="Tech Shessions"><img src="../img/logo-techshessions-r.png" width="84" height="84" alt="Tech Shessions"></a></li><li><a href="#" target="_blank" title="Killer Skills"><img src="../img/logo-killer-skills-r.png" width="84" height="84" alt="Killer Skills"></a></li><li><a href="#" target="_blank" title="Comunidad"><img src="../img/logo-comunidad-a-r.png" width="84" height="84" alt="Comunidad"></a></li><li><a href="#" target="_blank" title="Agentic World"><img src="../img/logo-agentic-world-r.png" width="84" height="84" alt="Agentic World"></a></li><li><a href="https://cachirulovalley.com/" target="_blank" title="Cachirulo Valley"><img src="../img/logo-cachirulo-valley-r.png" width="84" height="84" alt="Cachirulo Valley"></a></li></ul>
+<div style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;margin-top:12px;text-align:center;"><a href="https://sirviendocodigo.com/blog/software-crafters-barcelona-2026" target="_blank" style="color:#2F455C;font-weight:700;">Conoce a Software Crafters</a> &nbsp;/&nbsp; <a href="https://www.linkedin.com/company/sirviendo-codigo/" target="_blank" style="color:#2F455C;font-weight:700;">¿Llevas una comunidad? Escríbenos</a></div></section>
+
+<!-- ===== HISTORIETA ===== -->
+<section class="blk s-historieta t-azul"><a name="historieta" id="historieta"></a><table role="presentation" class="capitulo" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px;"><tr><td bgcolor="#2F455C" style="background:#2F455C;border-radius:6px;padding:7px 12px 7px 10px;font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;color:#ffffff;white-space:nowrap;" class="tit"><img src="../img/ic-historieta-blanco.png" width="20" height="20" alt="" style="display:inline-block;width:20px;height:20px;max-width:none;vertical-align:middle;border:0;margin-right:8px;"><span style="vertical-align:middle;">CAPÍTULO 6</span></td><td width="100%" style="padding-left:12px;"><h2 style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:23px;line-height:1.2;color:#2F455C;margin:0;">La historieta del mes: el bug de la máquina</h2></td></tr></table>
+<img class="tira" src="../img/tira-2026-11.png" width="440" align="center" alt="Historieta en 4 viñetas. Viernes, 18:59: alguien dice: en mi máquina funciona. Codiguito se queda pensando. Codiguito: perfecto, pues mandamos tu máquina a producción. Lunes, 9:00: Codiguito se lleva el ordenador al servidor y su dueño grita: ¡mi teclado RGB no!" style="display:block;width:440px;max-width:100%;height:auto;border:0;margin:0 auto;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;color:#2F455C;">
+<!-- Reacciones a la historieta: abren chiste.html, que las guarda en la pestaña «Historieta» de la hoja -->
+<table role="presentation" align="right" cellpadding="0" cellspacing="0" border="0" class="reacciones" style="margin-top:12px;width:auto;align-self:flex-end;margin-left:auto;"><tr>
+<td style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;font-weight:600;color:#2F455C;white-space:nowrap;">¿Qué te ha parecido?</td>
+<td style="padding:0 0 0 8px;"><a href="https://sirviendocodigo.github.io/newsletter/2026-11-v2/chiste.html?r=gracia&amp;mes=2026-11&amp;utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=newsletter-2026-11-v2&amp;utm_content=chiste-gracia" style="display:inline-block;text-decoration:none;background:#ffffff;border:2px solid #2F455C;border-radius:999px;padding:5px 12px 5px 6px;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;font-weight:700;color:#2F455C;white-space:nowrap;"><img src="../img/il-voto-top.png" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border:0;margin-right:6px;">Me ha hecho gracia</a></td><td style="padding:0 0 0 8px;"><a href="https://sirviendocodigo.github.io/newsletter/2026-11-v2/chiste.html?r=nolopillo&amp;mes=2026-11&amp;utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=newsletter-2026-11-v2&amp;utm_content=chiste-nolopillo" style="display:inline-block;text-decoration:none;background:#ffffff;border:2px solid #2F455C;border-radius:999px;padding:5px 12px 5px 6px;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;font-weight:700;color:#2F455C;white-space:nowrap;"><img src="../img/il-voto-meh.png" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border:0;margin-right:6px;">No lo pillo</a></td>
+</tr></table></section>
+
+<!-- ===== MADREMIA ===== -->
+<section class="blk s-madremia"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;"><tr>
+<td class="madremia" bgcolor="#F8F2F8" style="background:#F8F2F8;border:3px solid #32243D;border-right-width:7px;border-bottom-width:7px;border-radius:16px;padding:20px 22px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top"><a name="madremia" id="madremia"></a><table role="presentation" class="capitulo" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px;"><tr><td bgcolor="#32243D" style="background:#32243D;border-radius:6px;padding:7px 12px 7px 10px;font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;color:#ffffff;white-space:nowrap;" class="tit"><img src="../img/ic-madremia-blanco.png" width="20" height="20" alt="" style="display:inline-block;width:20px;height:20px;max-width:none;vertical-align:middle;border:0;margin-right:8px;"><span style="vertical-align:middle;">CAPÍTULO 7</span></td><td width="100%" style="padding-left:12px;"><h2 style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:23px;line-height:1.2;color:#32243D;margin:0;">Novedad</h2></td></tr></table>
+<img src="../img/madremia-logo.png" width="180" alt="madre mIA" style="display:block;border:0;margin:6px 0 8px;">
+<div style="font-family:'Gochi Hand','Comic Sans MS',cursive;font-size:20px;color:#A84736;margin-bottom:4px;">Para mujeres de 50 a 150 años.</div>
+<div style="font-family:'Barlow Condensed',Impact,'Arial Narrow',sans-serif;font-weight:900;font-size:34px;line-height:1;color:#32243D;text-transform:uppercase;margin-bottom:10px;">IA en tus manos</div></td>
+<td class="mm-logos" align="right" valign="top" width="150" style="width:150px;padding-left:8px;">
+<table role="presentation" width="150" cellpadding="0" cellspacing="0" border="0"><tr><td align="left"><img class="mm-iso" src="../img/codiguito-isotipo.png" width="80" height="82" alt="Sirviendo Código" style="display:block;width:80px;height:auto;border:0;"></td></tr>
+<tr><td align="right"><img class="mm-flor" src="../img/madremia-flor.png" width="88" alt="" style="display:block;width:88px;height:auto;border:0;margin-top:-10px;"></td></tr></table>
+</td></tr></table>
+<div style="font-family:Nunito,'Segoe UI',Arial,sans-serif;font-size:15px;line-height:1.55;color:#32243D;margin-bottom:14px;">madre mIA es una iniciativa en la que colabora Sirviendo Código para acercar la inteligencia artificial a mujeres a partir de 50 años. Con «IA en tus manos» aprenden a usarla desde el móvil y a detectar bulos.</div>
+<div style="font-family:Nunito,'Segoe UI',Arial,sans-serif;font-size:15px;line-height:1.55;color:#32243D;margin-bottom:14px;"><b>¿Conoces a alguna mujer a la que le pueda interesar?</b> Puede hacer el taller desde casa aprendiendo con la IA de WhatsApp, y muy pronto habrá también talleres presenciales.</div>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;"><tr>
+<td bgcolor="#A84736" style="background:#A84736;border:2.5px solid #32243D;border-radius:999px;padding:10px 18px;"><a href="https://api.whatsapp.com/send/?phone=34611068951&amp;text=Hola%2C+quiero+aprender+IA+con+madre+mIA.&amp;type=phone_number&amp;app_absent=0" target="_blank" style="font-family:Nunito,'Segoe UI',Arial,sans-serif;font-weight:800;font-size:14px;color:#ffffff;text-decoration:none;white-space:nowrap;">Hacer el taller desde casa</a></td>
+<td style="width:8px;font-size:0;">&nbsp;</td>
+<td bgcolor="#ffffff" style="background:#ffffff;border:2.5px solid #32243D;border-radius:999px;padding:10px 18px;"><a href="https://madremia.info/" target="_blank" style="font-family:Nunito,'Segoe UI',Arial,sans-serif;font-weight:800;font-size:14px;color:#32243D;text-decoration:none;white-space:nowrap;">Más información</a></td>
+</tr></table>
+</td></tr></table></section>
+
+<!-- ===== VOTO ===== -->
+<section class="blk s-voto t-verde"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td class="col2" width="50%" valign="middle" align="center" style="padding:6px 10px 6px 0;text-align:center;">
+<div class="tit" style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:20px;color:#2F455C;margin:0 0 4px;">¿Qué tal te ha sentado el diario?</div>
+<div style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#4A5F73;margin-bottom:14px;">Un clic y me ayudas a escribir la página de diciembre</div>
+<!-- EDITAR: cada enlace con su UTM o etiqueta de la herramienta de envío -->
+<table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;"><tr>
+<td align="center" style="padding:0 12px;"><a href="https://sirviendocodigo.github.io/newsletter/2026-11-v2/gracias.html?voto=top&amp;mes=2026-11&amp;utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=newsletter-2026-11-v2&amp;utm_content=voto-top" style="text-decoration:none;color:#2F455C;"><img src="../img/il-voto-top.png" width="48" height="48" alt="Top" style="display:block;margin:0 auto;border:0;"><span style="display:block;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;font-weight:600;margin-top:4px;color:#2F455C;">Top</span></a></td><td align="center" style="padding:0 12px;"><a href="https://sirviendocodigo.github.io/newsletter/2026-11-v2/gracias.html?voto=bien&amp;mes=2026-11&amp;utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=newsletter-2026-11-v2&amp;utm_content=voto-bien" style="text-decoration:none;color:#2F455C;"><img src="../img/il-voto-ok.png" width="48" height="48" alt="Bien" style="display:block;margin:0 auto;border:0;"><span style="display:block;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;font-weight:600;margin-top:4px;color:#2F455C;">Bien</span></a></td><td align="center" style="padding:0 12px;"><a href="https://sirviendocodigo.github.io/newsletter/2026-11-v2/gracias.html?voto=mejorable&amp;mes=2026-11&amp;utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=newsletter-2026-11-v2&amp;utm_content=voto-mejorable" style="text-decoration:none;color:#2F455C;"><img src="../img/il-voto-meh.png" width="48" height="48" alt="Mejorable" style="display:block;margin:0 auto;border:0;"><span style="display:block;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;font-weight:600;margin-top:4px;color:#2F455C;">Mejorable</span></a></td>
+</tr></table>
+</td>
+<td class="col2" width="50%" valign="middle" align="center" style="padding:6px 0 6px 10px;text-align:center;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;"><tr>
+<td align="center" style="padding:4px 0;text-align:center;">
+<div style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#2F455C;">Nos leemos en diciembre, que ya estoy buscando gorro.</div>
+<table role="presentation" align="center" width="260" cellpadding="0" cellspacing="0" border="0" style="margin:8px auto 0;width:260px;">
+<tr><td align="left" style="padding-left:76px;text-align:left;font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;font-weight:600;line-height:12px;color:#3E7F70;">Firmado:</td></tr>
+<tr><td style="font-size:0;line-height:0;"><img src="../img/codiguito-firma.gif" width="260" height="85" alt="Firmado: Codiguito;" style="display:block;width:260px;height:85px;border:0;margin-top:-6px;"></td></tr></table>
+</td></tr></table>
+</td></tr></table></section>
+</main>
+<footer class="pie"><div style="font-family:Comfortaa,'Arial Rounded MT Bold','Varela Round','Trebuchet MS',Arial,sans-serif;font-weight:700;font-size:18px;color:#ffffff;">sirviendo código;</div>
+<div style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;color:#cfe0ea;margin:10px 0 14px;">
+<a href="https://www.youtube.com/@SirviendoC%C3%B3digo" style="color:#ffffff;text-decoration:none;">YouTube</a> &nbsp;/&nbsp; <a href="https://www.instagram.com/sirviendo.codigo/" style="color:#ffffff;text-decoration:none;">Instagram</a> &nbsp;/&nbsp; <a href="https://www.tiktok.com/@sirviendo.codigo" style="color:#ffffff;text-decoration:none;">TikTok</a> &nbsp;/&nbsp; <a href="https://www.linkedin.com/company/sirviendo-codigo/" style="color:#ffffff;text-decoration:none;">LinkedIn</a> &nbsp;/&nbsp; <a href="https://x.com/SirviendoCodig" style="color:#ffffff;text-decoration:none;">X</a> &nbsp;/&nbsp; <a href="https://bsky.app/profile/sirviendocodigo.bsky.social" style="color:#ffffff;text-decoration:none;">Bluesky</a><br><a href="https://sirviendocodigo.com/" style="color:#ffffff;text-decoration:none;">sirviendocodigo.com</a> &nbsp;/&nbsp; <a href="https://eventos.wiki/" style="color:#ffffff;text-decoration:none;">eventos.wiki</a></div>
+<div style="font-family:Poppins,'Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;line-height:1.7;color:#a9bccb;">
+Recibes este correo porque te apuntaste a la newsletter de Sirviendo Código.<br>
+<!-- EDITAR: enlace real a la política de privacidad. *|LIST:ADDRESSLINE|* lo rellena Mailchimp con la dirección de la cuenta -->
+Sirviendo Código, *|LIST:ADDRESSLINE|*. <a href="https://sirviendocodigo.com/" style="color:#ffffff;">Política de privacidad</a><br>
+<a href="*|UNSUB|*" style="color:#ffffff;">Darte de baja</a> &nbsp;/&nbsp; <a href="*|UPDATE_PROFILE|*" style="color:#ffffff;">Cambiar preferencias</a>
+</div></footer>
+</div>
+<canvas id="nodos" aria-hidden="true"></canvas>
+<script>
+// Fondo de nodos de la marca: se mueven despacio, se unen cuando están cerca y se acercan un poco al ratón
+(()=>{const c=document.getElementById('nodos');if(!c)return;const x=c.getContext('2d');
+const cols=['68,193,240','112,193,173','47,69,92'];let W,H,N,ps=[],m={x:-999,y:-999};const dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);
+ N=Math.round(Math.min(90,Math.max(28,W*H/16000)));ps=Array.from({length:N},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*2.2+1.6,c:cols[Math.random()*3|0]}));}
+addEventListener('resize',size);addEventListener('mousemove',e=>{m.x=e.clientX;m.y=e.clientY;});size();
+const D=W<700?110:150;
+(function f(){x.clearRect(0,0,W,H);
+ for(const p of ps){const dx=m.x-p.x,dy=m.y-p.y,d=Math.hypot(dx,dy);if(d<200){p.vx+=dx/d*.012;p.vy+=dy/d*.012;}
+  p.vx*=.99;p.vy*=.99;if(Math.hypot(p.vx,p.vy)<.12){p.vx+=(Math.random()-.5)*.05;p.vy+=(Math.random()-.5)*.05;}
+  p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;}
+ for(let i=0;i<ps.length;i++)for(let j=i+1;j<ps.length;j++){const a=ps[i],b=ps[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+  if(d<D){x.strokeStyle='rgba('+a.c+','+(.28*(1-d/D))+')';x.lineWidth=1.2;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke();}}
+ for(const p of ps){x.fillStyle='rgba('+p.c+',.55)';x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill();}
+ requestAnimationFrame(f);})();})();
+</script><script>
+// Ranking compartido en la hoja de Google (pestaña «Ranking»). Sin API_URL se guarda solo en este navegador (modo prueba)
+const API_URL = "https://script.google.com/macros/s/AKfycbzMOEyIgnWCsfQTLf-irEmlIoDBWO5F4Uu1PUcv5_mKJJryc-jCHbUQDsDV4AqOuDUM/exec", MES = "2026-11";
+document.getElementById("sin-js").remove();
+const G = ["MVMRDDGRPA", "NODORURJLM", "CEDCBLIRRE", "DFSOAGASME", "EETMAHSJCT", "PISMCMFMHU", "LTTISLHVGP", "OHNTHGSRMA", "YACODIGOIR", "ICOMUNIDAD"], W = ["CODIGO", "MEETUP", "CHARLA", "COMUNIDAD", "NODO", "COMMIT", "DEPLOY", "BUG"];
+const el = document.getElementById("sopa"), lista = document.getElementById("lista");
+let found = new Set(), start = null, t0 = null, timer = null, done = false;
+G.forEach((fila,r)=>[...fila].forEach((ch,c)=>{const d=document.createElement("div");d.textContent=ch;d.dataset.r=r;d.dataset.c=c;el.appendChild(d);}));
+W.forEach(w=>{const s=document.createElement("span");s.textContent=w;s.id="w-"+w;lista.appendChild(s);});
+const cell=(r,c)=>el.children[r*10+c];
+function linea(a,b){const dr=Math.sign(b.r-a.r),dc=Math.sign(b.c-a.c),n=Math.max(Math.abs(b.r-a.r),Math.abs(b.c-a.c));
+ if(!(a.r==b.r||a.c==b.c||Math.abs(b.r-a.r)==Math.abs(b.c-a.c)))return null;const out=[];for(let i=0;i<=n;i++)out.push({r:a.r+dr*i,c:a.c+dc*i});return out;}
+function pos(e){const t=(e.touches?document.elementFromPoint(e.touches[0].clientX,e.touches[0].clientY):e.target);return t&&t.dataset&&t.dataset.r!=null?{r:+t.dataset.r,c:+t.dataset.c}:null;}
+function limpiar(){[...el.children].forEach(d=>d.classList.remove("sel"));}
+function marcar(a,b){limpiar();const l=linea(a,b);if(l)l.forEach(p=>cell(p.r,p.c).classList.add("sel"));return l;}
+function tick(){const s=Math.floor((Date.now()-t0)/1000);document.getElementById("crono").textContent=Math.floor(s/60)+":"+String(s%60).padStart(2,"0");}
+let actual=null;
+function down(e){if(done)return;const p=pos(e);if(!p)return;e.preventDefault();start=p;actual=p;if(!t0){t0=Date.now();timer=setInterval(tick,250);}marcar(p,p);}
+function move(e){if(!start)return;const p=pos(e);if(p){actual=p;marcar(start,p);}e.preventDefault();}
+function up(){if(!start)return;const l=linea(start,actual||start);start=null;limpiar();if(!l)return;
+ const txt=l.map(p=>G[p.r][p.c]).join(""),rev=[...txt].reverse().join("");const w=W.find(x=>(x==txt||x==rev)&&!found.has(x));
+ if(w){found.add(w);l.forEach(p=>cell(p.r,p.c).classList.add("ok"));document.getElementById("w-"+w).classList.add("ok");
+  document.getElementById("cont").textContent=found.size+" / "+W.length;if(found.size==W.length)fin();}}
+el.addEventListener("mousedown",down);el.addEventListener("mousemove",move);window.addEventListener("mouseup",up);
+el.addEventListener("touchstart",down,{passive:false});el.addEventListener("touchmove",move,{passive:false});window.addEventListener("touchend",up);
+let segs=0;function fin(){done=true;clearInterval(timer);segs=Math.round((Date.now()-t0)/1000);document.getElementById("tfinal").textContent=document.getElementById("crono").textContent;document.getElementById("fin").hidden=false;}
+function local(){try{return JSON.parse(localStorage.getItem("sc-rank-"+MES)||"[]");}catch(e){return[];}}
+// Ranking en directo: se vuelve a pedir cada 20 s mientras la pestaña está a la vista
+let previos=null, lider=null;
+const clave=x=>x.nombre+"|"+x.segundos, mmss=t=>Math.floor(t/60)+":"+String(t%60).padStart(2,"0"), esc=t=>String(t).replace(/[<>&"]/g,"");
+async function cargar(){let r=[];try{r=API_URL?await (await fetch(API_URL+"?accion=ranking&mes="+MES)).json():local();}catch(e){return;}
+ if(!Array.isArray(r))return; r.sort((a,b)=>a.segundos-b.segundos); r=r.slice(0,3);
+ const antes=new Set(previos||[]);
+ const COL=["#2F455C","#44C1F0","#70C1AD"];
+ document.getElementById("rank").innerHTML=r.map((x,i)=>`<li class="${previos&&!antes.has(clave(x))?"nuevo":""}"><i style="background:${COL[i]}">${i+1}</i><b>${esc(x.nombre)}</b><span>${mmss(x.segundos)}</span></li>`).join("")||"<li class='vacio'>Nadie todavía. Tu momento.</li>";
+ const top=r[0]?clave(r[0]):null;
+ if(previos&&lider!==null&&top&&top!==lider){const a=document.getElementById("record");a.innerHTML="&#9733; ¡Nuevo récord! <b>"+esc(r[0].nombre)+"</b> en "+mmss(r[0].segundos);a.classList.remove("ver");void a.offsetWidth;a.classList.add("ver");}
+ if(top)lider=top; previos=r.map(clave);}
+if(API_URL){document.getElementById("directo").hidden=false;setInterval(()=>{if(!document.hidden)cargar();},20000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)cargar();});}
+// Guardar en el ranking una sola vez: el botón se bloquea al primer clic y no se puede repetir aunque la hoja tarde en responder
+let guardando=false, guardado=false;
+document.getElementById("guardar").onclick=async()=>{
+ if(guardando||guardado) return;
+ guardando=true;
+ const btn=document.getElementById("guardar"), inp=document.getElementById("nombre");
+ btn.disabled=true; inp.disabled=true; btn.textContent="Guardando tu tiempo…"; btn.style.opacity=".6"; btn.style.cursor="wait";
+ const nombre=inp.value.trim()||"Anónimo";const e={nombre,segundos:segs};
+ try{if(API_URL)await fetch(API_URL+"?accion=guardar&mes="+MES+"&nombre="+encodeURIComponent(nombre)+"&segundos="+segs);else{const r=local();r.push(e);localStorage.setItem("sc-rank-"+MES,JSON.stringify(r));}}catch(err){}
+ guardado=true; guardando=false;
+ document.getElementById("fin").innerHTML="<b>¡Dentro! Mira el ranking</b>";cargar();};
+cargar();
+</script>
+<script>
+// Encaje sin huecos: en PC las tarjetas se reparten en dos columnas y la última de cada columna se estira hasta el final
+(function(){
+  var g=document.querySelector('.rejilla'); if(!g) return;
+  var IZQ=['charlas','reto','historieta'], CIERRE=['voto'];
+  var orden=[].slice.call(g.children), cols=null, cierre=null;
+  function montar(){
+    var pc=window.innerWidth>=980;
+    if(pc&&!cols){
+      cols=document.createElement('div');cols.className='cols';
+      var i=document.createElement('div');i.className='col col-i';var d=document.createElement('div');d.className='col col-d';
+      cols.appendChild(i);cols.appendChild(d);
+      cierre=document.createElement('div');cierre.className='cierre';
+      orden.forEach(function(b){ if(b.classList.contains('s-portada'))return;
+        if(CIERRE.some(function(k){return b.classList.contains('s-'+k);})){cierre.appendChild(b);return;}
+        (IZQ.some(function(k){return b.classList.contains('s-'+k);})?i:d).appendChild(b);});
+      g.appendChild(cols); g.appendChild(cierre);
+    } else if(!pc&&cols){
+      orden.forEach(function(b){g.appendChild(b);}); cols.remove(); cierre.remove(); cols=null; cierre=null;
+    }
+  }
+  var t; window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(montar,100);});
+  montar();
+})();
+</script>
+</body></html>

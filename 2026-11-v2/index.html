@@ -47,7 +47,7 @@ h2{font-size:clamp(20px,1.8vw,25px)!important;}
 .pola-play::after{content:"";position:absolute;left:13px;top:9px;border-left:12px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent;}
 .postit{transform:rotate(-1deg);}
 /* Logos de comunidades: redondos y pinchables */
-.logos{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px;}
+.logos{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
 .logos a{display:block;border-radius:50%;transition:transform .2s;}
 .logos a:hover{transform:scale(1.08) rotate(-4deg);}
 .logos img{display:block;width:76px;height:76px;}
@@ -94,7 +94,9 @@ h2{font-size:clamp(20px,1.8vw,25px)!important;}
 @media (max-width:700px){
  .juego-panel .sopa-wrap{display:block;} .juego-panel .sopa-top{max-width:none;}
  .col2{display:block!important;width:100%!important;}
- .mm-logos,.mm-logos table{width:96px!important;} .mm-iso{width:52px!important;} .mm-flor{width:58px!important;}
+ .mm-logos,.mm-logos table{width:62px!important;} .mm-logos{padding-left:4px!important;} .mm-iso{width:36px!important;} .mm-flor{width:42px!important;} td.madremia{padding:16px 12px!important;} .logo-r{width:54px!important;height:54px!important;}
+ .mm-btns,.mm-btns tbody,.mm-btns tr{display:block!important;width:100%!important;} .mm-btns td{display:block!important;text-align:center!important;margin:0 0 8px!important;} .mm-esp{display:none!important;}
+ .reacciones,.reacciones tbody,.reacciones tr{display:block!important;width:100%!important;text-align:center!important;} .reacciones td{display:inline-block!important;padding:4px!important;} .reacciones td:first-child{display:block!important;}
  .portada-gif{display:block!important;width:100%!important;padding:14px 0 0!important;}
  .portada-txt{display:block!important;width:100%!important;}
  .pola{display:inline-block!important;width:48%!important;}
@@ -225,9 +227,9 @@ h2{font-size:clamp(20px,1.8vw,25px)!important;}
 </td></tr></table>
 <div style="font-family:Nunito,'Segoe UI',Arial,sans-serif;font-size:15px;line-height:1.55;color:#32243D;margin-bottom:14px;">madre mIA es una iniciativa en la que colabora Sirviendo Código para acercar la inteligencia artificial a mujeres a partir de 50 años. Con «IA en tus manos» aprenden a usarla desde el móvil y a detectar bulos.</div>
 <div style="font-family:Nunito,'Segoe UI',Arial,sans-serif;font-size:15px;line-height:1.55;color:#32243D;margin-bottom:14px;"><b>¿Conoces a alguna mujer a la que le pueda interesar?</b> Puede hacer el taller desde casa aprendiendo con la IA de WhatsApp, y muy pronto habrá también talleres presenciales.</div>
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;"><tr>
+<table class="mm-btns" role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;"><tr>
 <td bgcolor="#A84736" style="background:#A84736;border:2.5px solid #32243D;border-radius:999px;padding:10px 18px;"><a href="https://api.whatsapp.com/send/?phone=34611068951&amp;text=Hola%2C+quiero+aprender+IA+con+madre+mIA.&amp;type=phone_number&amp;app_absent=0" target="_blank" style="font-family:Nunito,'Segoe UI',Arial,sans-serif;font-weight:800;font-size:14px;color:#ffffff;text-decoration:none;white-space:nowrap;">Hacer el taller desde casa</a></td>
-<td style="width:8px;font-size:0;">&nbsp;</td>
+<td class="mm-esp" style="width:8px;font-size:0;">&nbsp;</td>
 <td bgcolor="#ffffff" style="background:#ffffff;border:2.5px solid #32243D;border-radius:999px;padding:10px 18px;"><a href="https://madremia.info/" target="_blank" style="font-family:Nunito,'Segoe UI',Arial,sans-serif;font-weight:800;font-size:14px;color:#32243D;text-decoration:none;white-space:nowrap;">Más información</a></td>
 </tr></table>
 </td></tr></table></section>
